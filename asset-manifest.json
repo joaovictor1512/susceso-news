@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/susceso-news/static/css/main.92b7b514.css",
+    "main.js": "/susceso-news/static/js/main.8bd880d4.js",
+    "index.html": "/susceso-news/index.html",
+    "main.92b7b514.css.map": "/susceso-news/static/css/main.92b7b514.css.map",
+    "main.8bd880d4.js.map": "/susceso-news/static/js/main.8bd880d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92b7b514.css",
+    "static/js/main.8bd880d4.js"
+  ]
+}
