@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@tailwind components;
+
+//Estilização do Layout Padrão da Aplicação;
+.root {
+  @apply flex justify-center box-border;
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+.web-layout {
+  @apply w-full md:w-11/12 lg:w-5/6;
+}
+
+//Estilização de Componentes;
+.header {
+  @apply w-full border-solid border-b-[1px] border-gray-400 px-2 md:px-0 py-6 flex flex-row justify-between items-center content-center;
+}
+
+.header-icons {
+  @apply flex flex-row space-x-4;
+}
+
+.header-icon {
+  @apply w-7;
+}
+
+.navbar {
+  @apply w-full border-solid border-b-2 border-gray-400 px-2 md:px-0 py-2 flex flex-row justify-start items-center content-center;
+}
+
+.navbar-list {
+  @apply list-none flex flex-row divide-x divide-black content-center items-center;
+}
+
+.navbar-list-item {
+  @apply mr-4 text-sm uppercase font-light font-['Montserrat'];
+}
+
+.navbar-list-item > span {
+  @apply font-bold text-base;
+}
+
+//Estilização de Páginas;
+  //Index;
+  .index {
+    @apply w-full px-2 md:px-0 py-4 flex flex-col;
+  }
+
+  .cover {
+    @apply w-full h-64 md:h-96 pb-4 md:border-solid border-b-[1px] border-gray-400 flex flex-row content-center items-center md:divide-x-[1px] md:divide-solid md:divide-gray-400;
+  }
+
+  .cover-main {
+    @apply w-full md:w-3/5 lg:w-2/3 md:pr-4 h-full;
+  }
+
+  .cover-main-item {
+    @apply w-full h-full relative;
+  }
+
+  .cover-main-item-image {
+    @apply w-full h-full absolute object-cover object-center grayscale opacity-80;
+  }
+
+  .cover-main-item-info {
+    @apply w-full h-full absolute text-white px-8 flex flex-col justify-end content-start;
+  }
+
+  .cover-main-item-info-local {
+    @apply text-base uppercase font-['Montserrat'] pb-3;
+  }
+
+  .cover-main-item-info-title {
+    @apply text-3xl font-serif pb-4;
+  }
+
+  .cover-main-item-info-date {
+    @apply hidden md:flex text-sm font-['Montserrat'] pb-4;
+  }
+
+  .cover-secondary {
+    @apply hidden md:block md:w-2/5 lg:w-1/3 pl-4 h-full flex flex-col content-between;
+  }
+
+  .cover-secondary-item {
+    @apply w-full h-1/2 relative;
+  }
+
+  .cover-secondary-item:first-child {
+    @apply pb-[1px];
+  }
+
+  .cover-secondary-item:last-child {
+    @apply pt-[1px];
+  }
+
+  .cover-secondary-item-image {
+    @apply w-full h-full absolute object-cover object-center grayscale opacity-80;
+  }
+
+  .cover-secondary-item-info {
+    @apply w-full h-full absolute text-white px-4 flex flex-col justify-end content-start;
+  }
+
+  .cover-secondary-item-info-local {
+    @apply text-xs uppercase font-['Montserrat'] pb-2;
+  }
+
+  .cover-secondary-item-info-title {
+    @apply text-lg font-serif pb-2;
+  }
+
+  .index-news {
+    @apply w-full py-4 flex flex-col md:flex-row md:divide-solid divide-x-[1px] divide-gray-400;
+  }
+
+  .index-news-section-title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .latest-news {
+    @apply w-full md:w-3/5 lg:w-2/3 md:pr-4;
+  }
+
+  .latest-news-sections {
+    @apply w-full flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4;
+  }
+
+  .latest-news-image {
+    @apply w-full object-cover object-center;
+  }
+
+  .latest-news-main {
+    @apply w-full lg:w-2/3 flex flex-col space-y-2;
+  }
+
+  .latest-news-main > span.title {
+    @apply pt-2 text-xl leading-none font-bold;
+  }
+
+  .latest-news-main > span.description {
+    @apply font-['Montserrat'] text-sm;
+  }
+
+  .latest-news-main > div.localdate {
+    @apply font-['Montserrat'] w-full flex flex-row justify-between content-center items-center;
+  }
+
+  .latest-news-main > div.localdate > span.date {
+    @apply text-xs;
+  }
+
+  .latest-news-main > div.localdate > span.local {
+    @apply font-light;
+  }
+
+  .latest-news-secondary {
+    @apply md:w-full lg:w-1/3 flex md:flex-row lg:flex-col space-x-2 lg:space-x-0;
+  }
+
+  .latest-news-secondary-item {
+    @apply md:w-2/4 lg:w-full pb-4 flex flex-col space-y-2;
+  }
+
+  .latest-news-secondary-item > span.local {
+    @apply font-['Montserrat'] font-light;
+  }
+
+  .latest-news-secondary-item > span.title {
+    @apply font-bold text-lg leading-none;
+  }
+
+  .latest-news-secondary-item > span.date {
+    @apply text-xs font-['Montserrat'];
+  }
+
+  .most-viewed-news {
+    @apply w-full md:w-2/5 lg:w-1/3 md:px-4;
+  }
+
+  .most-viewed-news-items {
+    @apply w-full flex flex-col divide-solid divide-y-[1px] divide-gray-400;
+  }
+
+  .most-viewed-news-item {
+    @apply w-full flex-col pt-4 pb-2 space-y-3;
+  }
+
+  .most-viewed-news-items:first-child {
+    @apply pt-0;
+  }
+
+  .most-viewed-news-items:last-child {
+    @apply pb-0;
+  }
+
+  .most-viewed-news-item > div.info-1 {
+    @apply flex flex-row items-center space-x-2;
+  }
+
+  .most-viewed-news-item > div.info-2 {
+    @apply flex flex-col space-y-2;
+  }
+
+  div.info-1 > span.number {
+    @apply text-xl text-amber-700;
+    font-family: 'Abril Fatface', cursive;
+  }
+
+  div.info-1 > span.local {
+    @apply uppercase font-['Montserrat'] text-sm;
+  }
+
+  div.info-2 > span.title {
+    @apply text-xl font-bold leading-none;
+  }
+
+  div.info-2 > span.date {
+    @apply text-sm font-light font-['Montserrat'];
+  }
+
+  //Portfólio;
+  .portfolio {
+    @apply w-full px-2 md:px-0 py-4 flex flex-col;
+  }
+
+@tailwind utilities;
