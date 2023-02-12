@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/susceso-news/static/css/main.1b82962b.css",
-    "main.js": "/susceso-news/static/js/main.8e44b036.js",
+    "main.css": "/susceso-news/static/css/main.338b3e23.css",
+    "main.js": "/susceso-news/static/js/main.63ff1f13.js",
     "index.html": "/susceso-news/index.html",
-    "main.1b82962b.css.map": "/susceso-news/static/css/main.1b82962b.css.map",
-    "main.8e44b036.js.map": "/susceso-news/static/js/main.8e44b036.js.map"
+    "main.338b3e23.css.map": "/susceso-news/static/css/main.338b3e23.css.map",
+    "main.63ff1f13.js.map": "/susceso-news/static/js/main.63ff1f13.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b82962b.css",
-    "static/js/main.8e44b036.js"
+    "static/css/main.338b3e23.css",
+    "static/js/main.63ff1f13.js"
   ]
 }
